@@ -1,0 +1,6 @@
+Nome: Beatriz Coimbra José
+Idade:16.
+Conhecimento técnico: Tenho conhecimentos básicos em HTML, CSS, JavaScript, básico de python e de Mysql.
+Mora com: Com a minha mãe.
+Gosta de: Música. Faço aulas de piano e canto.
+Trabalho: Não trabalho na área, mas tenho muito interesse. Talvez não como desenvolvedora, mas com QA ou cybersegurança.
