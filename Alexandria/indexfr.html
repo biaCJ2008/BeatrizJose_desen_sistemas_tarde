@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         :root {
             --cor-roxa: rgb(41, 40, 48);
             --cor-marrom: rgb(81, 61, 70);
+            --cor-amarela: #a69c60
         }
 
         * {
@@ -17,13 +19,9 @@
         }
 
         body {
-            background: url("img/Background.png");
+            background: url("img/Background.jpg");
             background-repeat: repeat;
-        }
 
-        .geral{
-            background-color:var(--cor-marrom);
-            opacity: 60%;
         }
 
         .login {
@@ -32,7 +30,52 @@
             width: 70vw;
             height: 100vh;
             margin-left: auto;
-        
+            opacity: 96%;
+
+        }
+
+        header {
+            font-size: 380%;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--cor-amarela);
+            margin-left: 50%;
+
+        }
+
+        img {
+            left: 50%;
+            margin-left: 48%;
+            width: 24%;
+            top: 10%;
+            height: auto;
+            margin-top: 3%;
+        }
+
+        .entrada {
+            margin-top: 8%;
+        }
+
+        .input-box {
+            display: flex;
+        }
+
+        input {
+            width: 30%;
+            height: 10%;
+            padding: 5px;
+            position: center;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: var(--cor-roxa);
+        }
+
+        #btn_login {
+            color: white;
+        }
+
+        .imgindex {
+            width: 2%;
+            height: 20%;
         }
     </style>
 </head>
@@ -40,8 +83,30 @@
 <body>
     <div class="geral">
         <div class="login">
+            <div class="img"> <img src="img/darkmode.png" alt="Descrição da Imagem"> </div>
+            <div class="formlogin">
+                <form class="login-container" id="login" action="login" method="POST">
+                    <div class="top">
+                        <header>Login</header>
+                    </div>
+                    <div class="entrada">
+                        <div class="input-box">
+                            <img src="img/perfildarkmode.png" class="imgindex" id="profileimg" alt="Ícone de perfil">
+                            <input type="text" class="input-field" name="email" id="email" placeholder="E-mail">
+                        </div>
+                        <div class="input-box">
+                            <img src="img/senhadarkmode.png" class="imgindex" id="passwordimg" alt="Icon de senha">
+                            <input type="password" class="input-field" name="senha" id="senha" placeholder="Senha">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Entrar" id="btn_login">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
 </body>
 
 </html>
