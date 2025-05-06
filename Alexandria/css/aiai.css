@@ -7,31 +7,45 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background: url("../img/Background.jpg");
     background-repeat: repeat;
-   
+
 }
 
-main{
-    display:flex;
-    justify-content:flex-end;
-    align-items:flex-end;
+main {
+    justify-content: flex-end;
+    align-items: flex-end;
+
 }
 
-.login{
+.login {
     border-radius: 60% 0 0 60%;
     background: linear-gradient(to right, rgb(41, 40, 48), rgb(81, 61, 70));
     height: 100vh;
-    width:80%;
+    width: 60%;
     justify-content: flex-end;
     align-items: flex-end;
-    opacity:96%;
+    position: fixed;
+    padding-right: 20px;
+    right:0;
+    opacity: 96%;
 }
 
 .logo {
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+.formlogin{
+    font-family:'Montserrat', sans-serif;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position:fixed;
+    padding-right:170px;
+    right:0;
+    z-index: 1000;
 }
