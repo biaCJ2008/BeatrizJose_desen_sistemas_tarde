@@ -1,7 +1,8 @@
+
 create database empresa;
 use empresa;
 create table cliente(
-id_cliente int not null auto_increment primary key,
+pk_cliente int not null auto_increment primary key,
 nome_cliente varchar (20) not null,
 endereco_cliente varchar(80) not null,
 telefone_cliente varchar(20) not null,
