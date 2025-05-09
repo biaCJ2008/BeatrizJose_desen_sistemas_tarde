@@ -1,7 +1,7 @@
 :root {
     --cor-roxa: rgb(41, 40, 48);
     --cor-marrom: rgb(81, 61, 70);
-    --cor-amarela: #a69c60
+    --cor-amarela: #a69c60;
 }
 
 * {
@@ -13,7 +13,6 @@
 body {
     background: url("../img/Background.jpg");
     background-repeat: repeat;
-
 }
 
 main {
