@@ -6,10 +6,10 @@ require_once "conexao.php";
 $conexao = conectadb();
 
 // Define os novos valores
-$nome="Maria da Silva";
-$endereco="Rua Kalamango, 32";
-$telefone="(41) 5555-5555";
-$email="mariasilva@teste.com";
+$nome = "Maria da Silva";
+$endereco = "Rua Kalamango, 32";
+$telefone = "(41) 5555-5555";
+$email = "mariasilva@teste.com";
 
 //('Ricardo Lima', 'Travessa das Palmeiras, 50', '(61) 96543-2109', 'ricardo.lima@email.com');
 
@@ -20,20 +20,19 @@ $id_cliente = 4;
 $stmt = $conexao->prepare("UPDATE cliente SET nome_cliente = ?, endereco_cliente = ?, telefone_cliente = ?, email_cliente = ? WHERE pk_cliente = ?");
 
 // Associa os parâmetros aos valores da consulta
-$stmt->bind_param("ssssi",$nome,$endereco,$telefone,$email,$id_cliente);
+$stmt->bind_param("ssssi", $nome, $endereco, $telefone, $email, $id_cliente);
 
 // Executa a atualização
 if ($stmt->execute()) {
     echo "Cliente atualizado com sucesso!";
 } else {
-    echo "Erro ao atualizar cliente: ".$stmt->error;}
+    echo "Erro ao atualizar cliente: " . $stmt->error;
+}
 
 // Fecha a consulta e a conexão
 $stmt->close();
 $conexao->close();
 
-
-// CLIENTE QUE FOI ALTERADO: Cliente número >>4<<, pois foi criado 2 vezes então alterei um deles (o 4).
 
 
 ?>

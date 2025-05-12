@@ -15,13 +15,13 @@ $email = "beatrizcj@teste.com";
 $stmt = $conexao->prepare("INSERT INTO cliente (nome_cliente, endereco_cliente, telefone_cliente, email_cliente) VALUES (?,?,?,?)");
 
 // Associa os parâmetros aos valores da consulta
-$stmt ->bind_param("ssss", $nome, $endereco,$telefone,$email);
+$stmt->bind_param("ssss", $nome, $endereco, $telefone, $email);
 
 // Executa a inserção
-if ($stmt -> execute()) {
-    echo"Cliente adicionado com sucesso!";
+if ($stmt->execute()) {
+    echo "Cliente adicionado com sucesso!";
 } else {
-    echo "Erro ao adicionar cliente: ".$stmt->error;
+    echo "Erro ao adicionar cliente: " . $stmt->error;
 }
 
 // Fecha a consulta e a conexão com o banco de dados

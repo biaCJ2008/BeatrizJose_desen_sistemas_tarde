@@ -18,7 +18,8 @@ $stmt->bind_param("i", $pk_cliente);
 if ($stmt->execute()) {
     echo "Cliente removido com sucesso!";
 } else {
-    echo "Erro ao remover cliente: ".$stmt->error;}
+    echo "Erro ao remover cliente: " . $stmt->error;
+}
 
 // Fecha a consulta e a conexão
 $stmt->close();

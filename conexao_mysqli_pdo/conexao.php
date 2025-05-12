@@ -1,10 +1,6 @@
 <?php
 //Habilida relatório detalhado de erros no MySQLi
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-/**
- * Função para conectar ao banco de dados
- * Retorna um objeto de conexão MySQLi ou interrompe o script em caso de erro.
- */
 function conectadb() {
     // Configuração do banco de dados 
     $nomeservidor = "localhost:3307"; // Endereço do servidors

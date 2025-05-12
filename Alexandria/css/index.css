@@ -25,7 +25,7 @@ main {
     height: 100vh;
 }
 
-.login {
+.LoginRight {
     border-radius: 60% 0 0 60%;
     background: linear-gradient(to right, rgb(41, 40, 48), rgb(81, 61, 70));
     height: 100vh;
@@ -102,7 +102,7 @@ input {
 
 #senha {
 
-    width: 29%;
+    width: 25%;
     margin-bottom: 1%;
 }
 
