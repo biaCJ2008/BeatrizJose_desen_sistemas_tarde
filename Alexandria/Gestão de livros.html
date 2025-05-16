@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> INÍCIO </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/geral.css">
+    <script src="./JavaScript/geral.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="iconeMenu">
+                <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                    <div id="barra1"></div>
+                    <div id="barra2"></div>
+                    <div id="barra3"></div>
+                </div>
+                <div>
+                    <div class="img"> <img src="img/LOGO.png" class="logoRight" alt="Descrição da Imagem"></div>
+                    <div class="img"> <img src="img/icon conta usuário.png" class="logoRight" id="profileimg" alt="Descrição da Imagem"></div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="index.html"> Menu </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()">Home</button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/se.html"> Lorem Ipsum</a>
+                        <a href="estruturas/caso.html"> Lorem Ipsum </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Livros</button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/enquanto.html"> Livros </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()">Empréstimos</button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/vetorUni.html"> Empréstimos </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()">Clientes</button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/vetorUni.html"> Clientes</a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()">DashBoard</button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/vetorUni.html"> Dashboard </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()">Funcionários</button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/vetorUni.html">Funcionários</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div id="cabecalho">
+            <h1> GESTÃO DE LIVROS </h1>
+        </div>
+    </header>
+
+    <section>
+        <div id="corpo">
+            <h2> CADASTRAMENTO </h2>
+            <div class="gestao">
+                <div class="books"> <img width="13" height="13" src="https://img.icons8.com/android/24/plus.png"
+                        alt="plus" /> Novo Livro</div>
+                <div class="author"> <img width="13" height="13" src="https://img.icons8.com/android/24/plus.png"
+                        alt="plus" /> Novo Autor</div>
+                <div class="category"> <img width="13" height="13" src="https://img.icons8.com/android/24/plus.png"
+                        alt="plus" /> Nova Categoria</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

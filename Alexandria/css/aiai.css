@@ -98,6 +98,9 @@ button {
     padding-left: 15%;
 }
 
+
+
+
 /*------------------------------------------------LADO ESQUERDO-------------------------------------------------*/
 
 #LoginLeft{
@@ -107,7 +110,7 @@ button {
     width: 60%;
     justify-content: flex-start;
     align-items: flex-start;
-    position: fixed;
+    position:fixed;
 }
 
 #formLoginLeft{
@@ -121,3 +124,4 @@ button {
     padding-left: 20%;
 
 }
+
