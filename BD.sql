@@ -2,22 +2,22 @@
 create database empresa;
 use empresa;
 create table cliente(
-pk_cliente int not null auto_increment primary key,
-nome_cliente varchar (20) not null,
-endereco_cliente varchar(80) not null,
-telefone_cliente varchar(20) not null,
-email_cliente varchar (50) not null
+`id_cliente` int not null auto_increment primary key,
+`nome` varchar (20) not null,
+`endereco` varchar(80) not null,
+`telefone` varchar(20) not null,
+`email` varchar(50) not null
 );
 
 create table usuario(
-id_usuario varchar(10) default null,
-nome_usuario varchar(50) default null,
-senha_usuario varchar(32) default null,
-nivel_usuario int default null
+`id_usuario` varchar(10) default null,
+`nome` varchar(50) default null,
+`senha` varchar(32) default null,
+`nivel` int default null
 );
 
 -- Inserting data into cliente table
-INSERT INTO cliente (nome_cliente, endereco_cliente, telefone_cliente, email_cliente) VALUES
+INSERT INTO cliente (nome, endereco, telefone, email) VALUES
 ('João Silva', 'Rua das Flores, 123 - São Paulo/SP', '(11) 9999-8888', 'joao.silva@email.com'),
 ('Maria Santos', 'Av. Paulista, 1000 - São Paulo/SP', '(11) 7777-6666', 'maria.santos@email.com'),
 ('Carlos Oliveira', 'Rua XV de Novembro, 50 - Curitiba/PR', '(41) 8888-7777', 'carlos.oliveira@email.com'),
