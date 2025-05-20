@@ -60,16 +60,15 @@ $qtdLivros = $stmt2->fetchAll();
         <div id="cabecalho">
             <h1> GESTÃO DE LIVROS </h1>
         </div>
-    </header>
+</header>
 
-        <div id="corpoGestao">
-        <h2>CADASTRAMENTO</h2>
-            <div class="books"><button><img width="13" height="13" src="https://img.icons8.com/android/24/plus.png" alt="plus">Novo Livro</button></div>
-            <div class="author"><button><img width="13" height="13" src="https://img.icons8.com/android/24/plus.png" alt="plus">Novo Autor</button></div>
-            <div class="category"><button><img width="13" height="13" src="https://img.icons8.com/android/24/plus.png" alt="plus">Nova Categoria</button></div>
+            <h2>CADASTRAMENTO</h2>
+            <div class="books"><button>+ Novo Livro</button></div>
+            <div class="author"><button>+ Novo Autor</button></div>
+            <div class="category"><button>+ Nova Categoria</button></div>
             <div class="containerCounts">
                 <div class="containerCountRegistro">
-                    <p>Autores</p>
+                    <p>Livros</p>
                     <div class="countRegistro">
                         <p><?php $qtdLivros; ?></p>
                     </div>
@@ -93,8 +92,6 @@ $qtdLivros = $stmt2->fetchAll();
             <div class="input-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-
-            <!-- Campo de input de pesquisa -->
             <input 
                 id="search" 
                 type="text" 
@@ -103,6 +100,7 @@ $qtdLivros = $stmt2->fetchAll();
             >
         </div>
      </div>
+    <div class='titleliv'><h2>LIVROS</h2></div>
     <div class="tabela">
         <div class="tisch">
             <table>
