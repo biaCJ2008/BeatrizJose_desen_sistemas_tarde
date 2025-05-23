@@ -34,18 +34,44 @@ main {
     right:0;
     opacity: 96%;
 }
-
 .logo {
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.formlogin{
-    font-family:'Montserrat', sans-serif;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position:fixed;
-    padding-right:170px;
-    right:0;
+    position: fixed;
+    right: 0;
+    top: 10%; /* distância do topo */
+    width: 35%;
+    padding-right: 170px;
     z-index: 1000;
-}
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .formlogin {
+    font-family: 'Montserrat', 'sanserif';
+    position: fixed;
+    right: 0;
+    bottom: 40%; /* distância do rodapé */
+    width: 38%;
+    padding-right: 170px;
+    z-index: 1000;
+    left: 68%;
+  }
+
+  h1{
+    color:var(--cor-amarela);
+  }
+
+  .imgindex{
+    width:20px;
+    flex-direction:row;
+  }
+  
+  input{
+    background-color:var(--cor-roxa);
+    padding:5px;
+    border-radius:9px;
+    border:none;
+    width:20%;
+    position:fixed;
+  }
+
