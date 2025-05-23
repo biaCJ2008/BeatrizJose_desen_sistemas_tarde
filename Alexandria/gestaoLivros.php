@@ -100,7 +100,7 @@ $qtdLivros = $stmt2->fetchAll();
             >
         </div>
      </div>
-    <div class='titleliv'><h2>LIVROS</h2></div>
+    <div class='titleliv'><h2>LIVROS</h2>
     <div class="tabela">
         <div class="tisch">
             <table>

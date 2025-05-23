@@ -8,6 +8,7 @@
     --cor-azul: #8ecbd8;
 }
 
+
 body {
     margin: 0 auto;
     background: linear-gradient(to right, rgb(41, 40, 48), rgb(81, 61, 70));
