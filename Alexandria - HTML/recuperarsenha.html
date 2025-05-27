@@ -7,35 +7,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/aiai.css">
-    <title>teste antes de chora</title>
+    <title>Recuperar sua senha</title>
 </head>
 
-<body>
+
+</body>
+<main>
     <main>
-        <div class="LoginRight"><!---Div colorida-->
-            <div class="img"> <img src="img/darkmode.png" class="logoRight" alt="Descrição da Imagem"> </div><!---Logo-->
-            <div class="formloginRight" id="formulario"><!--Formulário-->
+        <div class="loginRight" id="LoginLeft">
+            <div class="img"> <img src="img/darkmode.png" class="logoRight" id="LogoLeft" alt="Descrição da Imagem">
+            </div>
+            <div class="formloginRight" id="formLoginLeft" id="formulario">
                 <form class="login-container" id="login" action="login" method="POST">
                     <div class="top">
-                        <h1>Login</h1>
+                        <h1>Recuperar a Senha</h1>
                     </div>
                     <div class="entrada">
                         <div class="input-box">
-                            <img src="img/perfildarkmode.png" class="imgindex" alt="Ícone de perfil">
+                            <img src="img/perfildarkmode.png" class="imgindex" id="passwordimg" alt="Ícone de perfil">
                             <input type="text" class="input-field" name="email" id="email" placeholder="E-mail">
                         </div>
                         <div class="input-box">
-                            <img src="img/senhadarkmode.png" class="imgindex" alt="Icon de senha">
-                            <input type="password" class="input-field" name="senha" id="senha" placeholder="Senha">
+                            <img src="img/senhadarkmode.png" class="imgindex" id="passwordimg" alt="Icon de senha">
+                            <input type="password" class="input-field" class="senhaLeft" name="senha" id="senha" placeholder="Senha">
                             <i id="toggleSenha" class="fa-solid fa-eye"></i>
                         </div>
-                    </div>
-                    <div class="esqueci-senha">
-                        <a href="recuperarsenha.html" class="forgotpw">Esqueceu sua senha?</a>
-                    </div>
-                    <div class="right">
-                        <button type="button">Entrar</button>
-                    </div>
+                        <div class="input-box">
+                            <img src="img/senhadarkmode.png" class="imgindex" id="passwordimg" alt="Icon de senha">
+                            <input type="password" class="input-field" class="senhaLeft" name="senha" id="senha" placeholder="Confirme sua senha">
+                            <i id="toggleSenha" class="fa-solid fa-eye"></i>
+                        </div>
+<!--Lembrar de arrumar o toggle-->
+                        <div class="right" id="left">
+                            <button type="button">Mudar senha</button>
+                        </div>
                 </form>
             </div>
         </div>
@@ -58,6 +63,6 @@
     </script>
 
 
-</body>
+    </body>
 
 </html>
