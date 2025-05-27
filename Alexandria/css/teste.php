@@ -100,7 +100,7 @@ $qtdLivros = $stmt2->fetchAll();
                 <?php foreach($livros as $livro): ?>
                 <tr>
                     <td><?=htmlspecialchars($livro["liv_titulo"])?></td>
-                    <td><?=htmlspecialchars($livro["liv_isnb"])?></td>
+                    <td><?=htmlspecialchars($livro["liv_isbn"])?></td>
                     <td><?=htmlspecialchars($livro["liv_idioma"])?></td>
                     <td><?=htmlspecialchars($livro["liv_num_paginas"])?></td>
                     <td><?=htmlspecialchars($livro["liv_estoque"])?></td>
