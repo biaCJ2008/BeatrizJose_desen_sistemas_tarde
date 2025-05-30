@@ -38,7 +38,6 @@ $stmt6 = $conexao->prepare("SELECT COUNT(*) AS total FROM autor");
 $stmt6->execute();
 $result6 = $stmt6->get_result();
 $qtdCategorias = $result6->fetch_assoc();
-
 ?>
 
 <!DOCTYPE html>
@@ -76,20 +75,19 @@ $qtdCategorias = $result6->fetch_assoc();
     </nav>
     <header>
         <div id="logo" class="logo">
-            <span>GESTÃO DE LIVROS</span>
+            <h2>GESTÃO DE LIVROS</h2>
         </div>
         <div class="brand-section">
             <div class="alexandria-logo">
-                <span class="star-icon">✦</span>
-                ALEXANDRIA
+            <div class="img"> <img src="img/LogoGestao.png" class="logoRight" id="logoGestao" alt="Descrição da Imagem"> </div><!---Logo-->
             </div>
         </div>
     </header>
 
     <main class="main-content">
         <h2 class="page-title">CADASTRAMENTO</h2>
-
         <div class="top-section">
+            <div class="button-action">
             <div class="actions-section">
                 <button class="action-btn">
                     <span class="plus-icon">+</span>
@@ -103,6 +101,7 @@ $qtdCategorias = $result6->fetch_assoc();
                     <span class="plus-icon">+</span>
                     NOVA CATEGORIA
                 </button>
+                </div>
             </div>
 
             <div class="stats-section">
@@ -142,7 +141,7 @@ $qtdCategorias = $result6->fetch_assoc();
                         <?php foreach ($livros as $livro): ?>
                             <tr>
                                 <td><?= htmlspecialchars($livro["liv_titulo"]) ?></td>
-                                <td><?= htmlspecialchars($livro["liv_isbn"]) ?></td>
+                                <td><?= htmlspecialchars($livro["liv_isnb"]) ?></td>
                                 <td><?= htmlspecialchars($livro["liv_idioma"]) ?></td>
                                 <td><?= htmlspecialchars($livro["liv_num_paginas"]) ?></td>
                                 <td><?= htmlspecialchars($livro["liv_estoque"]) ?></td>
@@ -159,7 +158,6 @@ $qtdCategorias = $result6->fetch_assoc();
         </div>
 
         <h2 class="section-title">CATEGORIAS</h2>
-
           <div class='titleliv'>
             <div class="tabela">
                 <div class="tisch">
@@ -167,11 +165,12 @@ $qtdCategorias = $result6->fetch_assoc();
                         <tr>
                             <th>Categoria</th>
                             <th>Quantidade de Livros</th>
+                            <th>Ação</th>
                         </tr>
                         <?php foreach ($categorias as $categoria): ?>
                             <tr>
                                 <td><?= htmlspecialchars($categoria["cat_nome"]) ?></td>
-                                <!--<td><?= htmlspecialchars($categoria["pk_cat"]) ?></td>-->
+                                <td>cat_qtdLivros</td>
                                 <td>
                                     <i class='fas fa-trash-alt'
                                         style="font-size: 20px; color: #a69c60; margin-right: 7px;"></i>
@@ -184,6 +183,59 @@ $qtdCategorias = $result6->fetch_assoc();
             </div>
         </div>
     </main>
+    <!--POPUP PRA EDITAR CAMPOS DAS TABELAS-->
+<div class="popup-overlay-cadastro" id="popup-cadastro-categoria">
+    <div class="cadastro-popup">
+        <form class="forms-cadastro" id="form-cadastro-categoria" method="POST">
+            <header>Edição de Categoria</header>
+            <input type="text" name="nome-categoria-cadastro" id="nome-categoria-cadastro" placeholder="Nome" required>
+            <button type="submit" class="btn-salvar">Salvar</button>
+            <button id="btn-fecha-categoria">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup-overlay-cadastro" id="popup-cadastro-autor">
+    <div class="cadastro-popup">
+        <form class="forms-cadastro" id="form-cadastro-autor" method="POST">
+            <header>Edição de Autor</header>
+            <input type="text" name="nome-autor-cadastro" id="nome-autor-cadastro" placeholder="Nome" required>
+            <input type="text" name="ano-nascimento-cadastro" id="ano-nascimento-cadastro" placeholder="Ano de Nascimento" required>
+            <input type="text" name="ano-morte-cadastro" id="ano-morte-cadastro" placeholder="Ano de Morte">
+            <button type="submit" class="btn-salvar">Salvar</button>
+            <button id="btn-fecha-autor">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup-overlay-cadastro" id="popup-cadastro-livro">
+    <div class="cadastro-popup">
+        <form class="forms-cadastro" id="form-cadastro-livro" method="POST">
+            <header>Edição de Livro</header>
+            <input type="text" name="titulo-cadastro" id="titulo-cadastro" placeholder="Título" required>
+            <input type="text" name="isnb-cadastro" id="isnb-cadastro" placeholder="ISNB" required>
+            <input list="autores-cadastro" id="autor-cadastro" name="autor-cadastro" placeholder="Autor" required>
+            <datalist id="autores-cadastro">
+                {% for autor in autores %} <!--php-->
+                    <option value="{{autor.nome}}"></option>
+                {% endfor %}
+            </datalist>
+            <input list="categorias-cadastro" id="categoria-cadastro" name="categoria-cadastro" placeholder="Categoria" required>
+            <datalist id="categorias-cadastro">
+                {% for categoria in categorias %}<!--php-->
+                    <option value="{{categoria.nome}}"></option><!--php-->
+                {% endfor %}<!--php-->
+            </datalist>
+
+            <input type="text" name="ano-publicacao-cadastro" id="ano-publicacao-cadastro" placeholder="Ano de Publicação" required>
+            <input type="text" name="estoque-cadastro" id="estoque-cadastro" placeholder="Quantidade em estoque" required>
+
+            <button type="submit" class="btn-salvar">Salvar</button>
+            <button id="btn-fecha-livro">Cancelar</button>
+        </form>
+    </div>
+</div>
+<script src="js/popupLivro.js"></script>
 </body>
 
 </html>

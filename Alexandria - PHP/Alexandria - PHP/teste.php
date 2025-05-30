@@ -43,6 +43,7 @@ $qtdCategorias = $result6->fetch_assoc();
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,34 +77,34 @@ $qtdCategorias = $result6->fetch_assoc();
     </nav>
     <header>
         <div id="logo" class="logo">
-            <span>GESTÃO DE LIVROS</span>
+            <h1>GESTÃO DE LIVROS</h1>
         </div>
         <div class="brand-section">
             <div class="alexandria-logo">
-                <span class="star-icon">✦</span>
-                ALEXANDRIA
+                <div class="img"> <img src="img/LOGO.png" class="logoGestao" alt="Logo Alexandria"> </div><!---Logo-->
             </div>
         </div>
     </header>
 
     <main class="main-content">
-        <h2 class="page-title">CADASTRAMENTO</h2>
-
-        <div class="top-section">
-            <div class="actions-section">
-                <button class="action-btn">
-                    <span class="plus-icon">+</span>
-                    NOVO LIVRO
-                </button>
-                <button class="action-btn">
-                    <span class="plus-icon">+</span>
-                    NOVO AUTOR
-                </button>
-                <button class="action-btn">
-                    <span class="plus-icon">+</span>
-                    NOVA CATEGORIA
-                </button>
+            <div class="titulo">
+                <h2>CADASTRAMENTO</h2>
             </div>
+            <div class="top-section">
+                <div class="actions-section">
+                    <button class="action-btn">
+                        <span class="plus-icon">+</span>
+                        NOVO LIVRO
+                    </button>
+                    <button class="action-btn">
+                        <span class="plus-icon">+</span>
+                        NOVO AUTOR
+                    </button>
+                    <button class="action-btn">
+                        <span class="plus-icon">+</span>
+                        NOVA CATEGORIA
+                    </button>
+                </div>
 
             <div class="stats-section">
                 <div class="stat-card">
@@ -112,7 +113,7 @@ $qtdCategorias = $result6->fetch_assoc();
                 </div>
                 <div class="stat-card">
                     <div class="stat-title">CATEGORIAS</div>
-                    <div class="stat-number">--</div> 
+                    <div class="stat-number">--</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-title">AUTORES</div>
@@ -120,11 +121,15 @@ $qtdCategorias = $result6->fetch_assoc();
                 </div>
             </div>
         </div>
-
-        <h2 class="section-title">LIVROS</h2>
+        <div class="campo"></div>
 
         <div class="search-section">
-            <input type="text" class="search-input" placeholder="🔍 Pesquisar">
+            <div class="titulo">
+                <h2>LIVROS</h2>
+            </div>
+            <div class='barra'>
+                <input type="text" class="search-input" placeholder="🔍 Pesquisar">
+            </div>
         </div>
 
         <div class='titleliv'>
@@ -158,9 +163,9 @@ $qtdCategorias = $result6->fetch_assoc();
             </div>
         </div>
 
-        <h2 class="section-title">CATEGORIAS</h2>
+        <div class = "titulo"><h2>Categorias</h2></div>
 
-          <div class='titleliv'>
+        <div class='titleliv'>
             <div class="tabela">
                 <div class="tisch">
                     <table>
@@ -183,6 +188,45 @@ $qtdCategorias = $result6->fetch_assoc();
                 </div>
             </div>
         </div>
+
+        
+        <div class="search-section">
+            <div class="titulo">
+                <h2>Autor</h2>
+            </div>
+            <div class='barra'>
+                <input type="text" class="search-input" placeholder="🔍 Pesquisar">
+            </div>
+        </div>
+
+        <div class='titleliv'>
+            <div class="tabela">
+                <div class="tisch">
+                    <table>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th>Data de Nascimento</th>
+                            <th>Quantidade de livros no catalogo</th>
+                        </tr>
+                        <?php foreach ($autores as $autor): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($autor["aut_nome"]) ?></td>
+                                <td><?= htmlspecialchars($autor["aut_sobrenome"]) ?></td>
+                                <td><?= htmlspecialchars($autor["aut_data_nascimento"]) ?></td>
+                                <td>
+                                    <i class='fas fa-trash-alt'
+                                        style="font-size: 20px; color: #a69c60; margin-right: 7px;"></i>
+                                    <i class="fas fa-pencil-alt" style="font-size: 20px; color: #a69c60;"></i>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        
     </main>
 </body>
 
