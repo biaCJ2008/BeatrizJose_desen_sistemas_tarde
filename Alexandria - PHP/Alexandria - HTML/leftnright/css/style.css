@@ -1,0 +1,45 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: all 0.4s ease;
+}
+
+.left {
+  order: 1;
+  background-color: #f0f0f0;
+}
+
+.right {
+  order: 2;
+  background-color: #fff;
+}
+
+body.reverse .left {
+  order: 2;
+  background-color: #fff;
+}
+
+body.reverse .right {
+  order: 1;
+  background-color: #f0f0f0;
+}

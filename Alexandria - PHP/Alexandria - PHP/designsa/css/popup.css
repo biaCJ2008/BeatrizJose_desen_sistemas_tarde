@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*CONFIGURAÇÕES POPUP EDIÇÃO*/
+#popup-cadastro-categoria, #popup-cadastro-autor, #popup-cadastro-livro, 
+#popup-cadastro-cliente, #popup-cadastro-funcionario, #popup-cadastro-emprestimo {
+    display: none;
+}
+
+.popup-overlay-cadastro {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.cadastro-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3a2d2b8e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    text-align: center;
+}
+
+.forms-cadastro header {
+    font-size: 20px;
+    color: #fff
+}
+
+.forms-cadastro input {
+    font-size: 15px;
+    background: #3629278e;
+    color: #fff;
+    border-radius: 15px;
+}

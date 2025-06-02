@@ -1,0 +1,125 @@
+:root {
+    --cor-roxa: rgb(41, 40, 48);
+    --cor-marrom: rgb(81, 61, 70);
+    --cor-amarela: #a69c60
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../img/Background.jpg");
+    background-repeat: repeat;
+
+
+}
+
+main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.LoginRight {
+    border-radius: 60% 0 0 60%;
+    background: linear-gradient(to right, rgb(41, 40, 48), rgb(81, 61, 70));
+    height: 100vh;
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 96%;
+}
+
+h1 {
+    font-size: 380%;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-amarela);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 2%;
+    /* Adiciona um espaçamento interno */
+    max-width: 67%;
+    overflow: hidden;
+}
+
+img {
+    flex-direction: row;
+    margin-left: 48%;
+    width: 24%;
+    top: 11%;
+    height: auto;
+    margin-top: 3%;
+}
+
+
+
+input {
+    flex-direction: column;
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--cor-roxa);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+
+
+}
+
+
+
+#btn_login {
+    color: var(--cor-roxa);
+    border-radius: 20px;
+    background-color: #FFEBBC;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    width: 25%;
+    border:none;
+    padding: 9px;
+    /* Adiciona um espaçamento interno */
+    max-width: 67%;
+    overflow: hidden;
+}
+
+#btn_login:hover {
+    background-color: #ebd196;
+}
+
+.imgindex {
+    width: 2%;
+    height: 20%;
+}
+
+#senha {
+
+    width: 25%;
+    margin-bottom: 1%;
+}
+
+i {
+    color: var(--cor-amarela);
+}
+
+.forgotpw {
+    color: #FFEBBC;
+    text-decoration: none;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+
+}
+
+.forgotpw:hover {
+    color: #ebd196;
+}
