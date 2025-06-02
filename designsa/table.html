@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Livros</title>
+    <link rel="stylesheet" href="bilubilu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <span>GESTÃO DE LIVROS</span>
+        </div>
+        <div class="brand-section">
+            <div class="alexandria-logo">
+                <span class="star-icon">✦</span>
+                ALEXANDRIA
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">CADASTRAMENTO</h1>
+
+        <div class="top-section">
+            <div class="actions-section">
+                <button class="action-btn">
+                    <span class="plus-icon">+</span>
+                    NOVO LIVRO
+                </button>
+                <button class="action-btn">
+                    <span class="plus-icon">+</span>
+                    NOVO AUTOR
+                </button>
+                <button class="action-btn">
+                    <span class="plus-icon">+</span>
+                    NOVA CATEGORIA
+                </button>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-title">LIVROS</div>
+                    <div class="stat-number"><?= $qtdLivros['total'] ?></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">CATEGORIAS</div>
+                    <div class="stat-number">--</div> <!-- Pode ser atualizado depois -->
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">AUTORES</div>
+                    <div class="stat-number">--</div> <!-- Pode ser atualizado depois -->
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">LIVROS</h2>
+
+        <div class="search-section">
+            <input type="text" class="search-input" placeholder="🔍 Pesquisar">
+        </div>
+
+        <div class='titleliv'>
+            <div class="tabela">
+                <div class="tisch">
+                    <table>
+                        <tr>
+                            <th>Título</th>
+                            <th>ISBN</th>
+                            <th>Idioma</th>
+                            <th>Páginas</th>
+                            <th>Estoque</th>
+                            <th>Ação</th>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">CATEGORIAS</h2>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

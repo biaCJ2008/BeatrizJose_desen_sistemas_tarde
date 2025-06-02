@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de overflow-x: auto</title>
+  <style>
+    .container {
+      width: 300px;
+      border: 2px solid #444;
+      overflow-x: auto;
+      white-space: nowrap; /* impede quebra de linha */
+    }
+
+    .conteudo {
+      width: 600px;
+      background-color: #add8e6;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Exemplo de <code>overflow-x: auto</code></h2>
+
+  <div class="container">
+    <div class="conteudo">
+      Este conteúdo é mais largo que o contêiner pai, então você verá uma barra de rolagem horizontal.
+    </div>
+  </div>
+
+</body>
+</html>
