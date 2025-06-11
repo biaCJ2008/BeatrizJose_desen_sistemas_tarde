@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Como criar um formulário completo em HTML </title>
+  <meta name="description" content="Aprenda a criar um site completo que 
+   usa formulários em HTML">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="JS/formulario1.js"></script>
+</head>
+
+<body>
+  <h1> Bem vindo ao site HTML da Beatriz Coimbra José </h1>
+  <h2> Preencha o formulário abaixo para participar do curso de HTML &
+    CSS completo, Senai - Téc Desenv Sistemas</h2><br />
+  <form action="Script_do_Formulario.php" method="post">
+
+
+    <!-- DADOS PESSOAIS-->
+
+    <div class="table1">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <table cellspacing="10">
+          <tr>
+            <td>
+              <label for="nome">Nome: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="nome" onkeypress="mascara(this,NOME)" size="14" maxlength="14" required>
+            </td>
+            <td>
+              <label for="sobrenome">Sobrenome: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="sobrenome" onkeypress="mascara(this,SOBRENOME)" size="14" maxlength="14"
+                required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Nascimento: </label>
+            </td>
+            <td align="left">
+              <input type="date" name="nascimento">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="rg">RG: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="rg" onkeypress="mascara(this,RG)" size="14" maxlength="14" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>CPF:</label>
+            </td>
+            <td align="left">
+              <input type="text" name="cpf" onkeypress="mascara(this,CPF)" size="14" maxlength="14" required>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+    </div>
+
+    <!-- ENDEREÇO -->
+    <div class="table2">
+      <fieldset>
+        <legend>Dados de Endereço</legend>
+        <table cellspacing="10">
+          <tr>
+            <td>
+              <label for="rua">Rua:</label>
+            </td>
+            <td align="left">
+              <input type="text" name="rua" onkeypress="mascara(this,RUA)" size="14" maxlength="14" required>
+            </td>
+            <td>
+              <label for="numero">Numero:</label>
+            </td>
+            <td align="left">
+              <input type="text" name="numero" onkeypress="mascara(this,NUM)" size="14" maxlength="14" required>
+            </td>
+            <td>
+              <label for="telefone">Telefone:</label>
+            </td>
+            <td align="left">
+              <input type="text" name="telefone" oninput="mascara(this,FONE)" size="14" maxlength="15" required>
+            </td>            
+          </tr>
+          <tr>
+            <td>
+              <label for="bairro">Bairro: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="bairro" onkeypress="mascara(this,BAIRRO)" size="14" maxlength="14" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="estado">Estado:</label>
+            </td>
+            <td align="left">
+              <select name="estado">
+                <option value="ac">Acre</option>
+                <option value="al">Alagoas</option>
+                <option value="am">Amazonas</option>
+                <option value="ap">Amapá</option>
+                <option value="ba">Bahia</option>
+                <option value="ce">Ceará</option>
+                <option value="df">Distrito Federal</option>
+                <option value="es">Espírito Santo</option>
+                <option value="go">Goiás</option>
+                <option value="ma">Maranhão</option>
+                <option value="mt">Mato Grosso</option>
+                <option value="ms">Mato Grosso do Sul</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="pa">Pará</option>
+                <option value="pb">Paraíba</option>
+                <option value="pr">Paraná</option>
+                <option value="pe">Pernambuco</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cidade">Cidade: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="cidade" onkeypress="mascara(this,CIDADE)" size="14" maxlength="14" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cep">CEP: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="CEP" onkeypress="mascara(this,CEP)" size="14" maxlength="14" required
+                maxlength="3">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+    </div>
+
+    <!-- DADOS DE LOGIN -->
+    <div class="table3">
+      <fieldset>
+        <legend>Dados de login</legend>
+        <table cellspacing="10">
+          <tr>
+            <td>
+              <label for="email">E-mail: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="email" onkeypress="mascara(this,EMAIL)" size="14" maxlength="14" required
+                maxlength="3">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="imagem">Imagem de perfil:</label>
+            </td>
+            <td>
+              <input type="file" name="imagem">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="login">Login de usuário: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="login" onkeypress="mascara(this,LOGIN)" size="14" maxlength="14" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pass">Senha: </label>
+            </td>
+            <td align="left">
+              <input type="text" name="senha" onkeypress="mascara(this,SENHA)" size="14" maxlength="14" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="passconfirm">Confirme a senha: </label>
+            </td>
+            <td align="left">
+              <input type="password" name="passconfirm">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+    </div>
+    <input type="submit">
+    <input type="reset" value="Limpar">
+  </form>
+</body>
+
+</html>
